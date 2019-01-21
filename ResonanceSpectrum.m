@@ -1,34 +1,34 @@
 function ResonanceSpectrum
-%2010Äê12ÔÂÎªº¯ÊıComplexPhi4ConformalFlat¶øĞ´¡£
-%¹¦ÄÜÊÇÇó·ÑÃ××ÓµÄÖÊÁ¿Æ½·½Æ×£¬¼´Êä³öÏà¹ØµÄÊı¾İ¡£
-%flag:ÓÃÀ´±êÊ¶Ê±¿ÕµÄĞÔÖÊ£¬ÆäÖµ·Ö±ğÎª1,0£¬-1¶ÔÓ¦dS, flat, AdSÊ±¿Õ¡£
-%Lambda4£º4DÊ±¿ÕµÄÓîÖæÑ§³£ÊıÖµ¡£
-%EorO:    È·¶¨·½³Ì½âµÃÆæÅ¼ĞÔ£¬1£ºÆæº¯Êı£¬2£ºÅ¼º¯Êı¡£
-%chiral£º È·¶¨·ÑÃ××ÓµÄÊÖÕ÷ĞÔ£¬1£¬×óÊÖ·ÑÃ××Ó£¬2ÓÒÊÖ·ÑÃ××Ó¡£
-%fraction:×îĞ¡Çø¼äºÍ×î´óÇø¼äµÄ±ÈÖµ¡£
-%a:       Ò»¸ö¿Éµ÷µÄ²ÎÊı£¬ÔÚº¯ÊıComplexPhi4ConformalFlatÖĞ±íÊ¾µÄÊÇºÍÎÂ¶ÈÓĞ¹ØµÄ
-%         ±³¾°±êÁ¿³¡µÄÖÊÁ¿²ÎÊı¡£
+%2010å¹´12æœˆä¸ºå‡½æ•°ComplexPhi4ConformalFlatè€Œå†™ã€‚
+%åŠŸèƒ½æ˜¯æ±‚è´¹ç±³å­çš„è´¨é‡å¹³æ–¹è°±ï¼Œå³è¾“å‡ºç›¸å…³çš„æ•°æ®ã€‚
+%flag:ç”¨æ¥æ ‡è¯†æ—¶ç©ºçš„æ€§è´¨ï¼Œå…¶å€¼åˆ†åˆ«ä¸º1,0ï¼Œ-1å¯¹åº”dS, flat, AdSæ—¶ç©ºã€‚
+%Lambda4ï¼š4Dæ—¶ç©ºçš„å®‡å®™å­¦å¸¸æ•°å€¼ã€‚
+%EorO:    ç¡®å®šæ–¹ç¨‹è§£å¾—å¥‡å¶æ€§ï¼Œ1ï¼šå¥‡å‡½æ•°ï¼Œ2ï¼šå¶å‡½æ•°ã€‚
+%chiralï¼š ç¡®å®šè´¹ç±³å­çš„æ‰‹å¾æ€§ï¼Œ1ï¼Œå·¦æ‰‹è´¹ç±³å­ï¼Œ2å³æ‰‹è´¹ç±³å­ã€‚
+%fraction:æœ€å°åŒºé—´å’Œæœ€å¤§åŒºé—´çš„æ¯”å€¼ã€‚
+%a:       ä¸€ä¸ªå¯è°ƒçš„å‚æ•°ï¼Œåœ¨å‡½æ•°ComplexPhi4ConformalFlatä¸­è¡¨ç¤ºçš„æ˜¯å’Œæ¸©åº¦æœ‰å…³çš„
+%         èƒŒæ™¯æ ‡é‡åœºçš„è´¨é‡å‚æ•°ã€‚
 clc
-pV=input('ÊÆÄÜº¯ÊıµÄÎÄ¼şÃû£¨Ä¬ÈÏÊÇxxx.dat£©£º  ','s');
-if isempty(pV)
+%pV=input('åŠ¿èƒ½å‡½æ•°çš„æ–‡ä»¶åï¼ˆé»˜è®¤æ˜¯xxx.datï¼‰ï¼š  ','s');
+%if isempty(pV)
     pV ='\URZ.dat';
-end
+%end
 
 pathname=pwd;
 U=load([pathname,'\',pV]);
 
-EorO=input('²¨º¯ÊıµÄÓî³Æ£¬1-Ææº¯Êı£¬2-Å¼º¯Êı (Ä¬ÈÏÎª1)£º  ');
+EorO=input('æ³¢å‡½æ•°çš„å®‡ç§°ï¼Œ1-å¥‡å‡½æ•°ï¼Œ2-å¶å‡½æ•° (é»˜è®¤ä¸º1)ï¼š  ');
 if isempty(EorO)
     EorO = 1;
 end
-fraction=input('²¨º¯ÊıÎªÆ½Ãæ²¨Ê±ÏÖ¶Ô¼¸ÂÊµÄÖµ£¨Ä¬ÈÏÎª0.1£©£º  ');
+fraction=input('æ³¢å‡½æ•°ä¸ºå¹³é¢æ³¢æ—¶ç°å¯¹å‡ ç‡çš„å€¼ï¼ˆé»˜è®¤ä¸º0.1ï¼‰ï¼š  ');
 if isempty(fraction)
     fraction =0.1;
 end
 
 
-%µ¼ÈëÊı¾İ£º
-%µ¼ÈëÊı¾İ£º
+%å¯¼å…¥æ•°æ®ï¼š
+%å¯¼å…¥æ•°æ®ï¼š
 if EorO==1
     str_EorO='_Odd';
 else
@@ -42,7 +42,7 @@ end
 % save([pathname,'\m2mDeltamTau',str_EorO,'.dat'],'m2mDeltamTau','-ASCII','-double')
 figure
 plot(m2(1,2:numel(m2)),ratio(1,2:numel(m2)),'k-')
-%    axis([0 max(U)*(1+0.2) 0 1])%Éè¶¨×ø±êµÄ·¶Î§¡£
+%    axis([0 max(U)*(1+0.2) 0 1])%è®¾å®šåæ ‡çš„èŒƒå›´ã€‚
 %    title(str3)
 xlabel('m^2')
 ylabel('P_R')
@@ -51,7 +51,7 @@ data=[m2(1,2:numel(m2));m(1,2:numel(m2));ratio(1,2:numel(m2))]';
 path2=[pathname,'\m^2_m_Deltam_Tau',str_EorO,'.csv'];
 m2mRelativeProbability=[pathname,'\m^2_m_RelativeProbability',str_EorO,'.dat'];
 save(m2mRelativeProbability,'data','-ASCII','-double');
-%Êä³öm^2,m,delta m,tau
+%è¾“å‡ºm^2,m,delta m,tau
 fid = fopen(path2, 'w');
 fprintf(fid, 'm^2, m, delta m , tau \n\n');
 fprintf(fid, '%.5f,   %.5f, %.15f,  %.5f \n', m2mDeltamTau');
