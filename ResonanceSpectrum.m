@@ -17,14 +17,14 @@ clc
 pathname=pwd;
 U=load([pathname,'\',pV]);
 
-EorO=input('波函数的宇称，1-奇函数，2-偶函数 (默认为1)：  ');
-if isempty(EorO)
+%EorO=input('波函数的宇称，1-奇函数，2-偶函数 (默认为1)：  ');
+%if isempty(EorO)
     EorO = 1;
-end
-fraction=input('波函数为平面波时现对几率的值（默认为0.1）：  ');
-if isempty(fraction)
+%end
+%fraction=input('波函数为平面波时现对几率的值（默认为0.1）：  ');
+%if isempty(fraction)
     fraction =0.1;
-end
+%end
 
 
 %导入数据：
