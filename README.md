@@ -1,4 +1,3 @@
 # Resonances
 
 Calclulate resonances
-# GRelativity
